@@ -142,7 +142,6 @@ int main(){
             }
             fclose(fil);
             
-            t = clock();
             // training
             for(i = 0; i < epoch+1; i++){
                 // test time
@@ -182,8 +181,6 @@ int main(){
                 }    
             }
             memcopy_scores_to_vector_model(m,buff);
-            t+=clock();
-            printf("%ld\n",(t)/CLOCKS_PER_SEC);
             ret = write(fd1[1],buff,sizeof(float)*(buffer_size+1));// writing to sons
             printf("%d Bytes written to server\n",ret);
             free_model(m);
