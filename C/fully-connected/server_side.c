@@ -16,7 +16,7 @@ void term(int signum){
 int main(int argc, char** argv){
     
     if(argc < 2){
-        fprintf(stderr,"Error: 2 params as input: ./exec number_of_clients/5\n");
+        fprintf(stderr,"Error: 2 params as input: ./exec number_of_clients/10\n");
         exit(1);
     }
     
